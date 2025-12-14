@@ -109,7 +109,25 @@ const taxBandsColumns: TableColumn<(typeof TAX_BANDS)[number]>[] = [
             {{ formatNaira(report.annualGrossIncome) }}
           </p>
           <p class="font-medium text-muted text-sm">
-            You earn about {{ formatNaira(report.monthlyGrossIncome) }}/month
+            {{ formatNaira(report.monthlyGrossIncome) }}/month
+          </p>
+        </div>
+
+        <NuxtSeparator />
+
+        <!-- Income after taxes -->
+
+        <div class="space-y-1">
+          <p class="font-semibold text-muted text-sm uppercase">
+            Annual Income After Tax
+          </p>
+          <p class="font-mono font-bold text-2xl">
+            {{ formatNaira(report.annualGrossIncome - report.annualTax) }}
+          </p>
+          <p class="font-medium text-muted text-sm">
+            {{
+              formatNaira(report.monthlyGrossIncome - report.monthlyTax)
+            }}/month
           </p>
         </div>
 
@@ -125,7 +143,7 @@ const taxBandsColumns: TableColumn<(typeof TAX_BANDS)[number]>[] = [
             {{ formatNaira(report.annualGrossIncome - report.totalDeductions) }}
           </p>
           <p class="font-medium text-muted text-sm">
-            The portion of your annual income from which the tax will be
+            The portion of your annual income from which the tax can be
             deducted. Calculated as your annual gross income minus total annual
             deductions
           </p>
