@@ -10,15 +10,15 @@ const taxTypes = [
     description:
       "Calculate Pay-As-You-Earn (PAYE) tax based on the Nigeria Tax Act 2025. This covers salaries, wages, allowances, and other personal income, including the new ₦800,000 tax-free threshold effective in 2026.",
     icon: "lucide:user",
-    to: "/personal-tax",
+    to: "/personal-income-tax",
   },
   {
     id: "business",
-    title: "Business Tax",
+    title: "Company Income Tax",
     description:
       "Estimate taxes for registered businesses, including Companies Income Tax (CIT) and applicable levies. Designed for SMEs and larger companies operating under Nigeria's updated tax framework.",
     icon: "lucide:building-2",
-    to: "/business-tax",
+    to: "/company-income-tax",
   },
 ];
 </script>
